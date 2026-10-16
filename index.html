@@ -2040,6 +2040,25 @@
   }
 </script>
 </body>
+
+<style>
+/* Correct menu image wrapper sizing: images live inside .menu-card-img-wrap, not directly in the card. */
+.menu-card-img-wrap{display:block;width:100%;height:200px;min-height:0;overflow:hidden;background:#20170b}
+.menu-card-img-wrap img{display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:center}
+@media(max-width:390px){
+  .menu-card{display:grid;grid-template-columns:1fr!important;align-content:start}
+  .menu-card-img-wrap{width:100%;height:auto;aspect-ratio:16/9;min-height:0}
+  .menu-card-img-wrap img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover}
+  .menu-card-body{min-width:0;padding:14px}
+  .menu-card-footer{margin-top:16px}
+}
+@media(min-width:391px) and (max-width:768px){
+  .menu-card{display:grid;grid-template-columns:minmax(0,1fr)!important}
+  .menu-card-img-wrap{height:auto;aspect-ratio:16/9}
+  .menu-card-img-wrap img{height:100%;aspect-ratio:16/9}
+}
+</style>
+
 </html><style>
 /* Mobile-first refinement: compact header, readable content, touch-friendly ordering */
 html{scroll-padding-top:84px;overflow-x:hidden}
